@@ -1,0 +1,291 @@
+:root {
+    --oscuro:#07070A;
+    --azulOscuro:#0A1128;
+    --azulClaro:#006FE6;
+    --blanco:#FEFCFB;
+    --titulos: 'Roboto', sans serif;
+    --parrafos: 'Monserrat', sans serif
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62,5%;
+}
+
+body {
+    font-size: 1,6rem;
+}
+
+*,*::before *::after {
+     box-sizing: inherit;
+}
+
+/*Estilos globales*/
+h1, h2, h3 {
+    font-family: var (--titulos);
+   }
+
+p, a {
+    font-family: var(--parrafos);
+}
+
+.ocultar {
+    display: none;
+
+    }
+/*Encabezado*/
+
+
+@keyframes desplazamiento {
+
+    0% {
+        transform: translateX(-100%);
+    }
+
+100% {transform: translateX(0)}
+}
+
+.encabezado{
+    background-image: url('../img/inicio\ o.jpg');
+    background-repeat: no-repeat;    
+    height: 100vh;
+    min-height: 30rem;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    z-index: 1;
+}
+
+.encabezado::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    background-color: rgba(0,0,0, .5);
+    z-index: -1;
+}
+
+.logo h2 {
+    font-size: 3rem;
+}
+
+.logo h2 span {
+    color: var(--azulClaro);
+}
+
+.contenido-navegacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--blanco);
+    box-shadow: 5px 5px 16px -6px rgba(0,0,0,0.45);
+    }
+ 
+.navegacion {
+    background-color: var(--blanco);
+    position: absolute;
+    left: 0;
+    top: 139px;
+    width: 100%;
+    animation: desplazamiento .5s ease-in-out
+    
+}
+
+@media(min-width: 768px){
+    .ocultar {
+        display: inline
+    }
+}
+
+.navegacion a {
+    display: block;
+    font-size: 1.5rem;
+    padding: 1.1rem;
+    color: var(--oscuro);
+    text-decoration: none;
+    transition: background-color .3s ease-in-out;
+        
+}
+
+.navegacion a:hover{
+    background-color: var(--azulClaro);
+    color: var(--blanco);
+}
+
+
+@media(min-width: 768px){
+    .navegacion a {
+        display: inline;
+    }
+}
+@media(min-width: 768px){
+    .navegacion {
+        position: relative;
+        top: unset;
+        width: auto;
+        background-color: unset;
+        animation: unset;
+    }
+}
+
+
+.hamburguesa span {
+    width: 3rem;
+    height: 0.5rem;
+    border: 3px solid white;
+    background-color: var(--oscuro);
+    display: block;
+}
+ 
+@media(min-width: 768px){
+    .hamburguesa {
+        display: none
+    }
+}
+
+/* contenido del encabezado */
+
+@media(min-width: 768px){
+    .contenido-encabezado {
+        display: flex;
+        align-items: center;
+        height: 50%;
+    }
+}
+
+
+.texto-encabezado h1{
+      font-size: 3rem;
+      text-align: center;
+      color: var(--blanco);
+      padding-top: 10rem;
+     
+}
+/* ventajas */
+
+@media(min-width: 768px){
+    .contenido-ventajas{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 2rem;
+    }
+}
+    
+
+.ventajas{
+    padding: 4rem;
+    background-color: var(--azulOscuro);
+
+}
+
+.ventaja{
+    color: var(--blanco);
+    text-align: center;
+}
+
+.ventaja i{
+    font-size: 4rem;
+}
+
+.ventaja h3 {
+    font-size: 2.5rem;
+}
+
+.ventaja p {
+    font-size: 2rem;
+}
+
+
+
+.nosotros-caja{
+    padding: 0px 20px 20px 50px;
+    margin: 2px 10px 10px 2px;
+    height: auto;
+
+}
+
+.sobre-nosotros{
+    width: 75%;
+    
+}
+.contenido-nosotros{
+ display: flex;
+}
+
+.nosotros{
+    width: 60%;
+    
+}
+
+.titulo1{
+    padding: 20px 20px 20px 50px;
+}
+
+/* .parrafo{
+
+}
+
+titulo2{
+
+} */
+.imagen-nosotros{
+    width: 40%;
+}
+
+.img{
+background-repeat: no-repeat;
+height: 600px; 
+width:680px;
+background-size: cover;
+background-position: center;
+z-index: 1; 
+margin: 0px 0px 0px 0xp;
+padding: 0px 0px 0px 0xp;
+
+}
+
+
+seccion sobre nosotros
+
+.nosotros{
+    width: 60%;
+}
+
+.imagen {
+    width: 40%;
+}
+
+/* .nosotros h3 {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--azulClaro);
+    padding: 30px 0px 0px 0px;
+    margin: 3px 0px 0px 0px;
+}
+
+.nosotros h4 {
+    text-align: center;
+    font-size: 2.3rem;
+    color: var(--azulClaro);
+    padding: 0px;
+    margin: 3px 0px 0px 0px;
+}
+.nosotros p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--oscuro);
+}
+
+.contenido-nosotros {
+
+    display: flex;
+}
+.img {
+background-repeat: no-repeat;
+height: 1000px;
+width: 1270px;
+background-size: cover;
+background-position: center;
+z-index: 1;} */
